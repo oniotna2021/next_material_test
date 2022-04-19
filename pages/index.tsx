@@ -1,65 +1,53 @@
-import Head from 'next/head'
-import Image from 'next/image'
-
-import styles from '@/pages/index.module.css'
+import * as React from "react";
+import F1grid from "./components/f1grid";
+import F2grid from "./components/f2grid";
+import Navbar from "./components/navbar";
+import Table from "./components/table";
+import Spinners from "./components/spinners";
+import Image from "./components/image"
+import Acordion from "./components/accordion"
+import Container from "./components/container"
+import Step from './components/step'
+import Ready from './components/ready'
+import Container2 from './components/container2'
 
 export default function Home() {
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div>
+      <h1 data-testid="container1">NextJS TRAINING</h1>
+      <h2>Material Library</h2>
+      <h3>Testing React Library</h3>
 
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <F1grid />
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+      <F2grid />
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+      <Navbar />
+      
+      <Table />
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+      <h1>SPINNERS</h1>
+      <Spinners />
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+      <h1>IMAGE CONTAINER</h1>
+      <Image />
 
-          <a href="https://vercel.com/new" className={styles.card}>
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      <h1>ACCORDIONS</h1>
+      <Acordion />
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <h1>CONTAINER</h1>
+      <Container />
+
+      <Step />
+
+      <h1>SNACK BAR FOR STATUS</h1>
+      <Ready />
+
+      <h1>CONTAINER 2</h1>
+      <Container2 />
+
     </div>
-  )
+  );
 }
+

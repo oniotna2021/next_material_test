@@ -3,12 +3,11 @@ import Home from '@/pages/index'
 
 describe('Home', () => {
   it('renders a heading', () => {
-    render(<Home />)
+    
+    const {getByTestId} =  render(<Home />)
+    const h1 =  getByTestId("container1");
 
-    const heading = screen.getByRole('heading', {
-      name: /welcome to next\.js!/i,
-    })
-
-    expect(heading).toBeInTheDocument()
+    expect(h1.textContent).toBe('NextJS TRAINING');
+    
   })
 })
